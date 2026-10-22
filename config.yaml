@@ -1,0 +1,6 @@
+database:
+  host: db.internal.example.com
+  user: admin
+  password: "Sup3rS3cretPass!"
+slack:
+  webhook: "https://hooks.slack.com/services/T0FAKE123/B0FAKE456/aB3dE5gH7jK9mN1pQ3sT5vXz"
