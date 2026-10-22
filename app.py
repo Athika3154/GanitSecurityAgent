@@ -4,7 +4,8 @@ import requests
 app = Flask(__name__)
 
 # TEST FIXTURE: fake key, hardcoded on purpose
-OPENAI_API_KEY = "sk-proj-Xk29fQ7mLp3Vn8TzRw4YbC1dHs6JaG0eUo5iNtMq2KxWvB7yZrPc"
+import os
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 
 
 @app.route("/chat", methods=["POST"])
@@ -20,4 +21,4 @@ def chat():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000, debug=True)
